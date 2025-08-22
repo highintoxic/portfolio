@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 60 100% 50%;
+    --accent: 270 95% 60%;
     --accent-foreground: 0 0% 7%;
 
     --destructive: 0 84% 60%;
@@ -35,7 +35,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 60 100% 50%;
+    --ring: 270 95% 60%;
 
     --radius: 0rem;
 
@@ -44,9 +44,9 @@ All colors MUST be HSL.
     --brutal-white: 0 0% 98%;
     --brutal-gray: 0 0% 15%;
     --brutal-gray-light: 0 0% 25%;
-    --brutal-accent: 60 100% 50%;
-    --brutal-accent-alt: 120 100% 50%;
-    --brutal-warning: 30 100% 50%;
+    --brutal-accent: 270 95% 60%;
+    --brutal-accent-alt: 300 95% 60%;
+    --brutal-warning: 0 95% 60%;
 
     /* Typography weights */
     --font-black: 900;
