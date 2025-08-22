@@ -12,20 +12,22 @@ const AboutSection = () => {
 						</h2>
 						<div className='space-y-6 font-mono'>
 							<p className='text-lg leading-relaxed'>
-								I'M A PASSIONATE FULL-STACK WEB DEVELOPER AND AI/ML INTEGRATION WHO BELIEVES IN THE POWER OF
-								CLEAN CODE AND BRUTAL DESIGN. I CRAFT DIGITAL EXPERIENCES THAT
-								ARE BOTH FUNCTIONAL AND VISUALLY STRIKING.
+								I'M A FULL-STACK DEVELOPER WITH A STRONG EMPHASIS ON BACKEND
+								SYSTEMS AND A PASSION FOR ARTIFICIAL INTELLIGENCE. I SPECIALIZE
+								IN BUILDING ROBUST, SCALABLE APPLICATIONS AND INTEGRATING
+								INTELLIGENT AI/ML FEATURES.
 							</p>
 							<p className='text-lg leading-relaxed'>
-								WITH EXPERTISE IN MODERN WEB TECHNOLOGIES, I TRANSFORM IDEAS
-								INTO POWERFUL, SCALABLE WEB APPLICATIONS THAT MAKE AN IMPACT.
+								MY EXPERTISE LIES IN TRANSFORMING COMPLEX IDEAS INTO POWERFUL,
+								EFFICIENT, AND IMPACTFUL WEB SOLUTIONS, FROM THE DATABASE TO THE
+								USER INTERFACE.
 							</p>
 							<div className='pt-4'>
 								<InteractiveCard className='p-6 bg-card'>
 									<div className='text-accent font-black text-xl mb-2'>
 										LOCATION
 									</div>
-									<div className='font-mono'>INDIA / WORLDWIDE</div>
+									<div className='font-mono'>INDIA / REMOTE</div>
 								</InteractiveCard>
 							</div>
 						</div>
@@ -51,9 +53,7 @@ const AboutSection = () => {
 								<div className='font-mono text-sm'>BUILDING SINCE</div>
 							</InteractiveCard>
 							<InteractiveCard className='p-6 bg-card text-center hover-tilt'>
-								<div className='text-3xl font-black text-accent mb-2'>
-									15+
-								</div>
+								<div className='text-3xl font-black text-accent mb-2'>15+</div>
 								<div className='font-mono text-sm'>PROJECTS</div>
 							</InteractiveCard>
 						</div>
