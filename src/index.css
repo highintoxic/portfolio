@@ -1,0 +1,307 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brutalist Dark Theme - Always Dark */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 60 100% 50%;
+
+    --radius: 0rem;
+
+    /* Brutalist specific tokens */
+    --brutal-black: 0 0% 7%;
+    --brutal-white: 0 0% 98%;
+    --brutal-gray: 0 0% 15%;
+    --brutal-gray-light: 0 0% 25%;
+    --brutal-accent: 60 100% 50%;
+    --brutal-accent-alt: 120 100% 50%;
+    --brutal-warning: 30 100% 50%;
+
+    /* Typography weights */
+    --font-black: 900;
+    --font-bold: 700;
+    --font-normal: 400;
+
+    /* Spacing system */
+    --space-brutal: 2rem;
+    --space-block: 4rem;
+
+    /* Shadows */
+    --shadow-brutal: 8px 8px 0px hsl(var(--brutal-black));
+    --shadow-brutal-hover: 12px 12px 0px hsl(var(--brutal-black));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    font-feature-settings: 'liga' 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black uppercase tracking-tight;
+    font-weight: var(--font-black);
+  }
+
+  p, span, div {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .brutalist-block {
+    @apply bg-card border-2 border-border relative overflow-hidden;
+    box-shadow: var(--shadow-brutal);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .brutalist-block:hover {
+    box-shadow: var(--shadow-brutal-hover);
+    transform: translate(-4px, -4px);
+  }
+
+  .brutalist-section {
+    @apply py-16 lg:py-24 relative;
+  }
+
+  .brutalist-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10;
+  }
+
+  /* Retro Effects */
+  .retro-scanlines {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(60, 100, 50, 0.03) 2px,
+      rgba(60, 100, 50, 0.03) 4px
+    );
+    animation: scanlines 0.1s infinite linear;
+  }
+
+  .retro-noise {
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(60, 100, 50, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(60, 100, 50, 0.02) 0%, transparent 50%);
+    animation: noise 0.2s infinite;
+  }
+
+  /* Interactive Animations */
+  .hover-tilt {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-tilt:hover {
+    transform: translate(-4px, -4px) rotateX(5deg) rotateY(-5deg);
+    transform-style: preserve-3d;
+  }
+
+  /* Glitch Effects */
+  .glitch-container {
+    position: relative;
+  }
+
+  .glitch-container::before,
+  .glitch-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    animation: glitch-anim 0.3s infinite;
+    opacity: 0.8;
+  }
+
+  .glitch-container::before {
+    background: hsl(var(--accent));
+    animation-delay: -0.1s;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  }
+
+  .glitch-container::after {
+    background: hsl(var(--destructive));
+    animation-delay: -0.2s;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  }
+
+  .text-glitch {
+    position: relative;
+    animation: text-glitch 0.3s infinite;
+  }
+
+  .text-glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 2px;
+    color: hsl(var(--accent));
+    z-index: -1;
+    animation: glitch-1 0.3s infinite;
+  }
+
+  .text-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: -2px;
+    color: hsl(var(--destructive));
+    z-index: -1;
+    animation: glitch-2 0.3s infinite;
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Pulse Glow */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Typewriter Effect */
+  .typewriter {
+    overflow: hidden;
+    border-right: 3px solid hsl(var(--accent));
+    animation: typewriter 2s steps(40, end), blink-cursor 0.75s step-end infinite;
+  }
+
+  /* 8-bit Pixel Text */
+  .pixel-text {
+    font-family: 'Courier New', monospace;
+    text-shadow: 
+      2px 0 0 hsl(var(--accent)),
+      -2px 0 0 hsl(var(--accent)),
+      0 2px 0 hsl(var(--accent)),
+      0 -2px 0 hsl(var(--accent)),
+      1px 1px 0 hsl(var(--accent)),
+      -1px -1px 0 hsl(var(--accent)),
+      1px -1px 0 hsl(var(--accent)),
+      -1px 1px 0 hsl(var(--accent));
+    filter: contrast(1.2) brightness(1.1);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+
+  /* Retro Scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: hsl(var(--brutal-gray));
+    border-left: 2px solid hsl(var(--border));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--accent));
+    border: 2px solid hsl(var(--border));
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--brutal-accent-alt));
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+@keyframes noise {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes glitch-anim {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+}
+
+@keyframes text-glitch {
+  0%, 100% { transform: translateX(0); }
+  10% { transform: translateX(-2px) skewX(5deg); }
+  20% { transform: translateX(2px) skewX(-5deg); }
+  30% { transform: translateX(-1px) skewX(2deg); }
+  40% { transform: translateX(1px) skewX(-2deg); }
+  50% { transform: translateX(0); }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(2px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  from {
+    text-shadow: 0 0 5px hsl(var(--accent)), 0 0 10px hsl(var(--accent));
+  }
+  to {
+    text-shadow: 0 0 10px hsl(var(--accent)), 0 0 20px hsl(var(--accent)), 0 0 30px hsl(var(--accent));
+  }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+  from, to { border-color: transparent; }
+  50% { border-color: hsl(var(--accent)); }
+}
