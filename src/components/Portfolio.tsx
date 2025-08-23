@@ -5,6 +5,7 @@ import ProjectsSection from './sections/ProjectsSection'
 import ContactSection from './sections/ContactSection'
 import Navigation from './Navigation'
 import RetroBackground from './RetroBackground'
+import ChatSection from './sections/ChatSection'
 
 const Portfolio = () => {
   return (
@@ -15,6 +16,7 @@ const Portfolio = () => {
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
+      <ChatSection />
       <ContactSection />
     </main>
   )

@@ -11,7 +11,7 @@ const InteractiveCard = ({
 }: InteractiveCardProps) => {
 	return (
 		<div
-			className={`brutalist-block cursor-pointer transition-all duration-300 hover-tilt ${className}`}
+			className={`brutalist-block transition-all duration-300 hover-tilt ${className}`}
 		>
 			{children}
 		</div>

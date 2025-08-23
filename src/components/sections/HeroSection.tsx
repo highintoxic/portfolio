@@ -52,7 +52,7 @@ const HeroSection = () => {
 								<span className='text-accent'>Patel</span>
 							</h1>
 							<p className='text-xl font-mono text-muted-foreground max-w-md'>
-								  FULL-STACK & AI DEVELOPER, BUILDING INTELLIGENT APPLICATIONS
+								  FULL-STACK & BACKEND DEVELOPER, BUILDING INTELLIGENT APPLICATIONS
 								AND DIGITAL EXPERIENCES.
 							</p>
 						</div>
