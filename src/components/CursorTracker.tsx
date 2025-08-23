@@ -30,7 +30,7 @@ interface CursorTrackerProps {
 }
 
 const CursorTracker = ({
-	wsUrl = "ws://localhost:3001",
+	wsUrl = import.meta.env.VITE_WS_URL || "ws://localhost:3001",
 }: CursorTrackerProps) => {
 	const { isConnected, cursors, sendCursorPosition, userCount } =
 		useWebSocket(wsUrl);
