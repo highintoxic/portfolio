@@ -4,6 +4,16 @@ import { ExternalLink, Github } from 'lucide-react'
 const ProjectsSection = () => {
   const projects = [
 		{
+			id: 6,
+			title: "Sonic - Identify Song",
+			description:
+				"Sonic is a song identification system designed to recognize audio tracks based on their unique acoustic signatures. The system employs the Fast Fourier Transform (FFT) to extract frequency-domain representations of audio signals, from which spectral fingerprints are generated. These fingerprints are subsequently converted into hash values that serve as compact and robust identifiers, enabling efficient storage and retrieval within a database. During identification, query audio segments are processed in the same manner, and their hashes are compared against the stored entries to achieve rapid and accurate song recognition.",
+			tech: ["REACT", "TYPESCRIPT", "PRISMA", "POSTGRES", "EXPRESS", "AZURE"],
+			github: "https://github.com/highintoxic/sonic",
+			live: "https://sonic.kuruvpatel.dev/",
+			featured: true,
+		},
+		{
 			id: 1,
 			title: "KASHVI CREATION",
 			description:
@@ -29,16 +39,16 @@ const ProjectsSection = () => {
 			description:
 				"A simple and efficient URL shortening service that allows users to create short links for their long URLs. The service provides analytics to track link clicks and user engagement.",
 			tech: ["MONGO", "EXPRESS", "VUE"],
-	
-			featured: true,
+
+			featured: false,
 		},
 		{
 			id: 4,
 			title: "Web Chat App",
 			description:
 				"A sleek, real-time web chat application that connects people instantly. With a clean interface and seamless messaging.",
-			tech: ["MySQL", "TypeORM","GraphQL","React" ],
-		
+			tech: ["MySQL", "TypeORM", "GraphQL", "React"],
+
 			featured: false,
 		},
 		{
@@ -47,7 +57,7 @@ const ProjectsSection = () => {
 			description:
 				"EcoBrew is an innovative platform dedicated to motivating users to recycle cups and reduce waste. By tracking your recycling efforts, EcoBrew shows you the tangible impact you're making on the environment through real-time statistics, personalized graphs, and insightful metrics. Join the movement, see your progress, and be inspired to make a difference—one cup at a time",
 			tech: ["MERN"],
-		
+
 			featured: false,
 		},
 		{
@@ -56,7 +66,7 @@ const ProjectsSection = () => {
 			description:
 				"Finway is your go-to financial hub, offering tools like budget tracking, expense splitting, and financial education to simplify money management. Take control of your finances with ease and confidence, all in one place.",
 			tech: ["MERN"],
-		
+
 			live: null,
 			featured: false,
 		},
