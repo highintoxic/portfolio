@@ -85,7 +85,7 @@ const ProjectsSection = () => {
 		<section id='projects' className='brutalist-section'>
 			<div className='brutalist-container'>
 				<div className='text-center mb-16'>
-					<h2 className='text-5xl font-black mb-6'>SELECTED WORK</h2>
+					<h2 className='text-5xl font-black mb-6'>PROJECTS</h2>
 					<p className='text-xl font-mono text-muted-foreground'>
 						PROJECTS THAT SHOWCASE MY DEVELOPMENT PROWESS
 					</p>
